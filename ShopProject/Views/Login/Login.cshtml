@@ -31,6 +31,7 @@
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                                 <asp:TextBox runat="server" ID="password" CssClass="form-control" placeholder="password"
                                              TextMode="Password"></asp:TextBox>
+                                @Html.TextBox("Password", null, new { @class = "form-control" })
                             </div>
                             <div class="input-group">
                                 <div class="checkbox">

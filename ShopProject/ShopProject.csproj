@@ -120,6 +120,38 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Global.asax" />
+    <Content Include="Styles\css\1-col-portfolio.css" />
+    <Content Include="Styles\css\bootstrap.css" />
+    <Content Include="Styles\css\bootstrap.min.css" />
+    <Content Include="Styles\css\jquery.smartmenus.bootstrap.css" />
+    <Content Include="Styles\css\owl\owl.carousel.css" />
+    <Content Include="Styles\css\owl\owl.carousel.js" />
+    <Content Include="Styles\css\owl\owl.theme.css" />
+    <Content Include="Styles\css\owl\owl.transitions.css" />
+    <Content Include="Styles\fonts\font-awesome.min.css" />
+    <Content Include="Styles\img\12.jpg" />
+    <Content Include="Styles\img\13.jpg" />
+    <Content Include="Styles\img\14.jpg" />
+    <Content Include="Styles\img\15.jpg" />
+    <Content Include="Styles\img\2.png" />
+    <Content Include="Styles\img\22.jpg" />
+    <Content Include="Styles\img\700x300.jpg" />
+    <Content Include="Styles\img\agsquare_%402X.png" />
+    <Content Include="Styles\img\banner.jpg" />
+    <Content Include="Styles\img\item01.jpg" />
+    <Content Include="Styles\img\item02.jpg" />
+    <Content Include="Styles\img\item03.jpg" />
+    <Content Include="Styles\img\logo.png" />
+    <Content Include="Styles\img\portfolio\item01.jpg" />
+    <Content Include="Styles\img\portfolio\item02.jpg" />
+    <Content Include="Styles\img\portfolio\item03.jpg" />
+    <Content Include="Styles\img\portfolio\item04.jpg" />
+    <Content Include="Styles\img\portfolio\item05.jpg" />
+    <Content Include="Styles\img\portfolio\item06.jpg" />
+    <Content Include="Styles\img\products\1.jpg" />
+    <Content Include="Styles\img\products\2.jpg" />
+    <Content Include="Styles\img\products\3.jpg" />
+    <Content Include="Styles\img\triangular_%402X.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -144,6 +176,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\fonts\fontawesome-webfont.eot" />
+    <Content Include="Styles\fonts\fontawesome-webfont.svg" />
+    <Content Include="Styles\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Styles\fonts\fontawesome-webfont.woff" />
+    <Content Include="Styles\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Styles\fonts\FontAwesome.otf" />
+    <Content Include="Styles\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Styles\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Styles\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Styles\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Styles\fonts\glyphicons-halflings-regular.woff2" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
