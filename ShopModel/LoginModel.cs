@@ -9,7 +9,7 @@ namespace ShopModel
     public class LoginModel
     {
         public int Userid { get; set; }
-        //public string FullName { get; set; }
+       
         [Required(ErrorMessage = "Username required", AllowEmptyStrings = false)]
         public string Username { get; set; }
         [Required(ErrorMessage = "Password Required", AllowEmptyStrings = false)]
