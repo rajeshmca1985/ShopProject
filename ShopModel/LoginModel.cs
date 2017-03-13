@@ -10,10 +10,10 @@ namespace ShopModel
     {
         public int Userid { get; set; }
        
-        [Required(ErrorMessage = "Username required", AllowEmptyStrings = false)]
+        //[Required(ErrorMessage = "Username required", AllowEmptyStrings = false)]
         public string Username { get; set; }
-        [Required(ErrorMessage = "Password Required", AllowEmptyStrings = false)]
-        [DataType(System.ComponentModel.DataAnnotations.DataType.Password)]
+        //[Required(ErrorMessage = "Password Required", AllowEmptyStrings = false)]
+        //[DataType(System.ComponentModel.DataAnnotations.DataType.Password)]
         public string Password { get; set; }
     }
 }

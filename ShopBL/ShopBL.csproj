@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{6DC3471B-7341-4E58-B4FE-B93B534D1932}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ShopBL</RootNamespace>
     <AssemblyName>ShopBL</AssemblyName>
@@ -31,8 +31,27 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UserLoginBL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ShopDAO\ShopDAO.csproj">
+      <Project>{4a545c24-8b6f-49d5-8c76-dabb77c5688a}</Project>
+      <Name>ShopDAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShopModel\ShopModel.csproj">
+      <Project>{2249d48f-c3a0-46f1-8669-cc08f9e7c5a7}</Project>
+      <Name>ShopModel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

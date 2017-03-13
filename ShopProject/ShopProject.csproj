@@ -113,6 +113,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -191,6 +194,10 @@
     <Content Include="Styles\fonts\glyphicons-halflings-regular.woff2" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ShopBL\ShopBL.csproj">
+      <Project>{6dc3471b-7341-4e58-b4fe-b93b534d1932}</Project>
+      <Name>ShopBL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ShopModel\ShopModel.csproj">
       <Project>{2249d48f-c3a0-46f1-8669-cc08f9e7c5a7}</Project>
       <Name>ShopModel</Name>
