@@ -124,6 +124,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="Global.asax" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\contact.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.smartmenus.bootstrap.js" />
+    <Content Include="js\jquery.smartmenus.js" />
+    <Content Include="js\tutorial.js" />
+    <Content Include="js\wow.min.js" />
     <Content Include="Styles\css\1-col-portfolio.css" />
     <Content Include="Styles\css\bootstrap.css" />
     <Content Include="Styles\css\bootstrap.min.css" />
