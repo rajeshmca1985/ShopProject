@@ -27,7 +27,7 @@ namespace ShopProject.Controllers
                 if (user != null)
                 {
                     if (model.Username == user.Username && model.Password == user.Password)
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Home", "Home");
                 }
                 else
                 {

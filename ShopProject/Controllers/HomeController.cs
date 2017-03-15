@@ -11,7 +11,7 @@ namespace ShopProject.Controllers
         //
         // GET: /Home/
 
-        public ActionResult Index()
+        public ActionResult Home()
         {
             return View();
         }
