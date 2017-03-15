@@ -1,20 +1,21 @@
-﻿<html>
+﻿<!DOCTYPE html>
+<html>
 <head>
-    @*<meta charset="utf-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="dot net templates  | aspxtemplates.com">
-    <meta name="author" content="aspxtemplates.com">*@
+    <meta name="author" content="aspxtemplates.com">
     <!-- Bootstrap Core CSS -->
-    <title>Akshara Portfolio - Bootstrap Template</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>Shop Template</title>
+    <link href="~/Styles/css/bootstrap.css" rel="stylesheet" />
     <!-- SmartMenus jQuery Bootstrap Addon CSS -->
-    <link href="css/jquery.smartmenus.bootstrap.css" rel="stylesheet">
-    <link href="css/owl/owl.carousel.css" rel="stylesheet" type="text/css" />
-    <link href="css/owl/owl.theme.css" rel="stylesheet" type="text/css" />
-    <link href="css/owl/owl.transitions.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/css/jquery.smartmenus.bootstrap.css" rel="stylesheet" />
+    <link href="~/Styles/css/owl/owl.carousel.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/css/owl/owl.theme.css" rel="stylesheet" type="text/css" />
+    <link href="~/Styles/css/owl/owl.transitions.css" rel="stylesheet" type="text/css" />
     <!-- Custom CSS -->
-    <link href="css/1-col-portfolio.css" rel="stylesheet">
+    <link href="~/Styles/css/1-col-portfolio.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet'
           type='text/css'>
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,700italic,400,700"
@@ -33,7 +34,6 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
         <!-- Header Navbar fixed top -->
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container">
@@ -41,7 +41,7 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><i class="fa fa-diamond"></i>Akshara</a>
+                    <a class="navbar-brand" href="#"><i class="fa fa-diamond"></i>Shop</a>
                 </div>
                 <div class="navbar-collapse collapse">
                     <!-- Left nav -->
@@ -81,12 +81,16 @@
                 </div>
             </div>
         </div>
-        <%--main Content--%>
-        <div class="container-fluid">
+
+        <div class="container body-content">
+            @RenderBody()
+        </div>
+
+        @*<div class="container-fluid">
             <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
 
             </asp:ContentPlaceHolder>
-        </div>
+        </div>*@
         <footer id="fh5co-footer" class="padding100">
 
             <div class="fh5co-footer-content">
@@ -127,7 +131,7 @@
                         </div>
 
                         <div class="col-md-3 col-sm-12 col-md-pull-9 animated wow fadeInLeft" data-wow-delay="0.8s">
-                            <div class="fh5co-footer-logo"><a href="index.html">Akshara</a></div>
+                            <div class="fh5co-footer-logo"><a href="index.html">Shop</a></div>
                             <p class="fh5co-copyright"><small>&copy; 2016. All Rights Reserved. <br>	by <a href="http://aboostrap.com/" target="_blank">aspxtemplates.com</a> Images: <a href="http://aspxtemplates.com/" target="_blank">Pexels</a></small></p>
                             <p class="fh5co-social-icons">
                                 <a href="#"><i class="fa fa-twitter"></i></a>
