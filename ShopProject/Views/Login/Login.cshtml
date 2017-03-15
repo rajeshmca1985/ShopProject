@@ -1,8 +1,14 @@
-﻿@{
+﻿@model ShopModel.LoginModel
+@{
     ViewBag.Title = "Login";
+    //Layout = "~/Views/Shared/_LoginPartial.cshtml";
 }
+
+
+<h2>Login</h2>
 <html>
 <head>
+   
     <title>Shop Login</title>
     <link href="~/Styles/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Styles/css/jquery.smartmenus.bootstrap.css" rel="stylesheet" />
@@ -10,7 +16,20 @@
     <link href="~/Styles/css/owl/owl.theme.css" rel="stylesheet" />
     <link href="~/Styles/css/owl/owl.transitions.css" rel="stylesheet" />
     <link href="~/Styles/css/1-col-portfolio.css" rel="stylesheet" />
-    <link href="~/Styles/fonts/font-awesome.min.css" rel="stylesheet" /> 
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet'
+          type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400italic,700italic,400,700"
+          rel="stylesheet" type="text/css" />
+    <!-- Required plugin - Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
+    <link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css" />
+   
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
 </head>
 <body>
     <div class="padding100">
@@ -30,14 +49,14 @@
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
                                 @*<asp:TextBox runat="server" ID="username" CssClass="form-control" placeholder="username or email">
                                     </asp:TextBox>*@
-                                @Html.Label("User Name", htmlAttributes: new { @class = "form-control" })
+                                @Html.Label("UserName or Email", htmlAttributes: new { @class = "form-control" })
                                 @Html.TextBox("txtUserName", null, new { @class = "form-control" })
-
+                                
                             </div>
                             <div style="margin-bottom: 25px" class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                                 @*<asp:TextBox runat="server" ID="password" CssClass="form-control" placeholder="password"
-                                    TextMode="Password"></asp:TextBox>*@
+                                             TextMode="Password"></asp:TextBox>*@
                                 @Html.Label("Password", htmlAttributes: new { @class = "form-control" })
                                 @Html.TextBox("Password", null, new { @class = "form-control" })
                             </div>
