@@ -12,19 +12,28 @@ namespace ShopProject.Controllers
 {
     public class LoginController : Controller
     {
-        public ActionResult Index()
+        public ActionResult Login()
         {
             return View();
         }
-       // [HttpPost]
+       [HttpPost]
         public ActionResult Login(LoginModel model)
         {
+            UserLoginBL loginbl = new UserLoginBL();
             try
             {
-                UserLoginBL userbl = new UserLoginBL();
-                var response = userbl.ValidateLogin(model);
-                // return response;
 
+                LoginModel user = loginbl.ValidateLogin(model);
+                if (user != null)
+                {
+                    if (model.Username == user.Username && model.Password == user.Password)
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    ViewBag.Message = "Invalid login!";
+                    ViewBag.Error = "Credentials invalid. Please try again.";
+                }
             }
             catch (Exception ex)
             {

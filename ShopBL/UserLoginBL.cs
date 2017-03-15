@@ -11,22 +11,12 @@ namespace ShopBL
     public class UserLoginBL
     {
         UserLoginDAO loginDAO = new UserLoginDAO();
-        public UserLoginDetails ValidateLogin(LoginModel obj)
+        public LoginModel ValidateLogin(LoginModel obj)
         {
-            UserLoginDetails usd = null;
+            LoginModel usd = null;
             try
             {
-                // UserLoginDetails loginDetails=  loginDAO.ValidateLogin(obj);     
-                usd = loginDAO.ValidateLogin(obj);
-
-                //byte[] time = BitConverter.GetBytes(DateTime.UtcNow.ToBinary());
-                //byte[] key = Guid.NewGuid().ToByteArray();
-                //string token = Convert.ToBase64String(time.Concat(key).ToArray());
-                //usd.apitoken = token;
-
-                ////throw new ApplicationException("The User could not be found");
-
-
+                usd = loginDAO.ValidateLogin(obj.Username, obj.Password);
             }
             catch (Exception ex)
             {
