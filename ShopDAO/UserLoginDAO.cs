@@ -16,7 +16,7 @@ namespace ShopDAO
         private IDbConnection _db = new SqlConnection(ConfigurationManager.ConnectionStrings["ShopConnnection"].ConnectionString);
         public LoginModel ValidateLogin(string username, string password)
         {
-            var obj = _db.Query<LoginModel>("select User_name,Password from Login where Username ='" + username + "' and Password = '" + password + "'").FirstOrDefault();
+            var obj = _db.Query<LoginModel>("select User_name as Username,Password from Login where User_name ='" + username + "' and Password = '" + password + "'").FirstOrDefault();
             return obj;
         }
     }
