@@ -24,5 +24,19 @@ namespace ShopBL
             }
             return usd;
         }
+
+        public LoginModel SignupUser(LoginModel obj)
+        {
+            LoginModel usd = null;
+            try
+            {
+                usd = loginDAO.SignupUser(obj);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return usd;
+        }
     }
 }

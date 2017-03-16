@@ -2,6 +2,7 @@
 @{
     ViewBag.Title = "Login";
 }
+<!DOCTYPE html>
 <html>
 <head>
     <title>Shop Login</title>
@@ -54,9 +55,9 @@
                             <div class="form-group">
                                 <div class="col-md-12 control">
                                     <div style="padding-top: 15px; font-size: 85%">
-                                        Don't have an account! <a href="#" onclick="$('#loginbox').hide(); $('#signupbox').show()">
-                                            Sign Up Here
-                                        </a>
+                                        Don't have an account! 
+                                        <a href='@Url.Action("Signup", "Signup")'>Sign Up Here</a>
+                                            
                                     </div>
                                 </div>
                             </div>
