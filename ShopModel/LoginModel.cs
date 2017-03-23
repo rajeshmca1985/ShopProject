@@ -14,9 +14,13 @@ namespace ShopModel
         //[DataType(System.ComponentModel.DataAnnotations.DataType.Password)]
         public string Password { get; set; }
         public string apitoken { get; set; }
-        public Boolean isadmin { get; set; }
+        public string isadmin { get; set; }
         public string firstname { get; set; }
         public string lastname { get; set; }
+        public bool publicAccess { get; set; }
+        public bool privateAccess { get; set; }
+        public HttpPostedFileBase[] uploadFile { get; set; }
+        public string uploadFilepath { get; set; }
       
     }
 }

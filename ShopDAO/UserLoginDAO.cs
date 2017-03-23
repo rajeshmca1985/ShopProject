@@ -29,6 +29,9 @@ namespace ShopDAO
             p.Add("firstname", usr.firstname);
             p.Add("lastname", usr.lastname);
             p.Add("password", usr.Password);
+            p.Add("isadmin", usr.isadmin == "yes" ? 1 : 0);
+            p.Add("publicAccess", usr.publicAccess);
+            p.Add("privateAccess", usr.privateAccess);
             _db.Execute("sp_Add_UserRegistration", p, commandType: CommandType.StoredProcedure);
             return usr;
         }

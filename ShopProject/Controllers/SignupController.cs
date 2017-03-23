@@ -2,6 +2,7 @@
 using ShopModel;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -28,6 +29,28 @@ namespace ShopProject.Controllers
             UserLoginBL loginbl = new UserLoginBL();
             try
             {
+                string arImagePath = string.Empty, arUploadDir = string.Empty, arImageUrl = string.Empty;
+                //FileInfo[] dat, xml;
+                arUploadDir = @"~/Uploads/ARImages";
+                bool arUploadDirexists = System.IO.Directory.Exists(Server.MapPath(arUploadDir));
+                try
+                {
+
+                    if (arUploadDirexists)
+                        System.IO.Directory.CreateDirectory(Server.MapPath(arUploadDir));
+                    if (model.uploadFile[0] != null && model.uploadFile[0].ContentLength > 0)
+                    {
+                        arImagePath = Path.Combine(Server.MapPath(arUploadDir), (model.uploadFile[0]).FileName);
+                        arImageUrl = Path.Combine(arUploadDir, (model.uploadFile[0]).FileName);
+                        (model.uploadFile[0]).SaveAs(arImagePath);
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                }
+                arImageUrl = arImageUrl.Replace(@"\", "/");
+                model.uploadFilepath = arImageUrl;
                 LoginModel user = loginbl.SignupUser(model);
                 if (user != null)
                 {
@@ -48,3 +71,10 @@ namespace ShopProject.Controllers
         }
     }
 }
+      
+        
+    
+
+
+    
+
