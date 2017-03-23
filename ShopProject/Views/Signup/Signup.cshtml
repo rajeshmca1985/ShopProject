@@ -4,11 +4,11 @@
     Layout = null;
 }
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Signup</title>
+<form action="" method="post" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+
     <link href="~/Styles/css/bootstrap.min.css" rel="stylesheet" />
     <link href="~/Styles/css/jquery.smartmenus.bootstrap.css" rel="stylesheet" />
     <script src="~/Styles/css/owl/owl.carousel.js"></script>
@@ -21,10 +21,9 @@
           rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css">
     <link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
+
     @using (Html.BeginForm("Signup", "Signup", FormMethod.Post))
-{
+    {
         <div id="signupbox" style="margin-top: 50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
             <div class="panel panel-default">
                 <div class="panel-heading panel-heading-custom">
@@ -39,13 +38,13 @@
                         <div class="form-group">
                             @Html.Label("User Name", htmlAttributes: new { @class = "col-md-3 control-label" })
                             <div class="col-md-9">
-                                @Html.TextBoxFor(a => a.Username, new { @id = "txtusername", @class = "form-control",@placeholder = "User name" })
+                                @Html.TextBoxFor(a => a.Username, new { @id = "txtusername", @class = "form-control", @placeholder = "User name" })
                             </div>
                         </div>
                         <div class="form-group">
                             @Html.Label("First Name", htmlAttributes: new { @class = "col-md-3 control-label" })
                             <div class="col-md-9">
-                                @Html.TextBoxFor(a => a.firstname, new { @id = "txtfirstname", @class = "form-control",@placeholder = "First Name" })
+                                @Html.TextBoxFor(a => a.firstname, new { @id = "txtfirstname", @class = "form-control", @placeholder = "First Name" })
                             </div>
                         </div>
                         <div class="form-group">
@@ -64,7 +63,7 @@
                             @Html.Label("Admin", htmlAttributes: new { @class = "col-md-3 control-label" })
                             <div class="col-md-9">
                                 @Html.RadioButtonFor(a => a.isadmin, "yes", new { @id = "adminyes", @checked = true }) Yes
-                                @Html.RadioButtonFor(a => a.isadmin, "no", new { @id = "adminno"}) No
+                                @Html.RadioButtonFor(a => a.isadmin, "no", new { @id = "adminno" }) No
                             </div>
                         </div>
                         <div class="form-group">
@@ -79,8 +78,11 @@
                             @Html.Label("User Image", htmlAttributes: new { @class = "col-md-3 control-label" })
                             <div class="col-md-9">
                                 @*@Html.TextBoxFor(model => model.uploadArImage, "", new { @type = "file", @class = "form-control", @id = "uploadAr", @accept = "image/*", @onChange = "validate(this.value)" })*@
-                                @*@Html.TextBoxFor(a => a.uploadFile, "", new { @type = "file",@id = "uploadf" })*@
-                                <input type="file" name="file" />
+
+                                @*@Html.TextBoxFor(a => a.uploadFile, "", new { @type = "file", @class = "form-control", @id = "uploadAr", @accept = "image/*", @onChange = "validate(this.value)" })*@
+
+                                @Html.TextBoxFor(a => a.fileup, "", new { @type = "file", @class = "form-control", @id = "fileup", @accept = "image/*"})
+                                @Html.ValidationMessageFor(a => a.fileup, "", new { @class = "text-danger" })
                             </div>
                         </div>
 
@@ -98,6 +100,6 @@
                 </div>
             </div>
         </div>
-}
-</body>
-</html>
+    }
+
+</form>

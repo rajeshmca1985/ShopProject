@@ -18,8 +18,8 @@ namespace ShopModel
         public string firstname { get; set; }
         public string lastname { get; set; }
         public bool publicAccess { get; set; }
-        public bool privateAccess { get; set; }
-        public HttpPostedFileBase[] uploadFile { get; set; }
+        public bool privateAccess { get; set; }      
+        public HttpPostedFileBase[] fileup { get; set; }
         public string uploadFilepath { get; set; }
       
     }

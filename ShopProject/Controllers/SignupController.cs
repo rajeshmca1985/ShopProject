@@ -6,6 +6,11 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.IO.Compression;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Converters;
+using System.Configuration;
 
 namespace ShopProject.Controllers
 {
@@ -33,22 +38,17 @@ namespace ShopProject.Controllers
                 //FileInfo[] dat, xml;
                 arUploadDir = @"~/Uploads/ARImages";
                 bool arUploadDirexists = System.IO.Directory.Exists(Server.MapPath(arUploadDir));
-                try
-                {
 
-                    if (arUploadDirexists)
-                        System.IO.Directory.CreateDirectory(Server.MapPath(arUploadDir));
-                    if (model.uploadFile[0] != null && model.uploadFile[0].ContentLength > 0)
-                    {
-                        arImagePath = Path.Combine(Server.MapPath(arUploadDir), (model.uploadFile[0]).FileName);
-                        arImageUrl = Path.Combine(arUploadDir, (model.uploadFile[0]).FileName);
-                        (model.uploadFile[0]).SaveAs(arImagePath);
-                    }
-
-                }
-                catch (Exception ex)
+                if (!arUploadDirexists)
+                    System.IO.Directory.CreateDirectory(Server.MapPath(arUploadDir));
+                if (model.fileup[0] != null && model.fileup[0].ContentLength > 0)
                 {
+                    arImagePath = Path.Combine(Server.MapPath(arUploadDir), (model.fileup[0]).FileName);
+                    arImageUrl = Path.Combine(arUploadDir, (model.fileup[0]).FileName);
+                    (model.fileup[0]).SaveAs(arImagePath);
                 }
+
+
                 arImageUrl = arImageUrl.Replace(@"\", "/");
                 model.uploadFilepath = arImageUrl;
                 LoginModel user = loginbl.SignupUser(model);
@@ -71,10 +71,10 @@ namespace ShopProject.Controllers
         }
     }
 }
-      
-        
-    
 
 
-    
+
+
+
+
 
